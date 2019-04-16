@@ -48,5 +48,11 @@ namespace AspNetCoreMvc2.Introduction.Controllers
             //for test bilgeadam branch
             return _calculator.Calculate(100).ToString();
         }
+
+        public string Calculate3()
+        {
+            //for test bilgeadam branch
+            return _calculator.Calculate(100).ToString();
+        }
     }
 }
