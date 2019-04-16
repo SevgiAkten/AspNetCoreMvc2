@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreMvc2.Introduction.Models;
 using AspNetCoreMvc2.Introduction.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AspNetCoreMvc2.Introduction
@@ -18,7 +20,9 @@ namespace AspNetCoreMvc2.Introduction
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddMvc();
-			services.AddScoped<ICalculator, Calculator8>();
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=SchoolDb;Trusted_Connection=true";
+            services.AddDbContext<SchoolContext>(options => options.UseSqlServer(connection));
+			services.AddTransient <ICalculator, Calculator8>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
