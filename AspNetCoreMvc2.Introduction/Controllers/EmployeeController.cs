@@ -13,9 +13,11 @@ namespace AspNetCoreMvc2.Introduction.Controllers
 	public class EmployeeController : Controller
 	{
 		private ICalculator _calculator;
-		public EmployeeController(ICalculator calculator)
+        ICalculator _calculator2;
+		public EmployeeController(ICalculator calculator, ICalculator calculator2 )
 		{
 			_calculator = calculator;
+            _calculator2 = calculator2;
 		}
 		public IActionResult Add()
 		{
@@ -40,6 +42,7 @@ namespace AspNetCoreMvc2.Introduction.Controllers
 
 		public string Calculate()
 		{
+            _calculator2.Calculate(1000);
 			return _calculator.Calculate(100).ToString();
 		}        
     }
