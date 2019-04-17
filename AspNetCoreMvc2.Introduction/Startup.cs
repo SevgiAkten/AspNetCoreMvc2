@@ -23,6 +23,8 @@ namespace AspNetCoreMvc2.Introduction
             var connection = @"Server=(localdb)\mssqllocaldb;Database=SchoolDb;Trusted_Connection=true";
             services.AddDbContext<SchoolContext>(options => options.UseSqlServer(connection));
 			services.AddTransient <ICalculator, Calculator8>();
+            //çok sıklıkla çağrılan sınıflar singleton olabilir add delete gibi. sadece 1 nesne örneği oluşturur bellekten silmez 
+            //addscoped her kullanıcı için bir nesne oluşturu
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

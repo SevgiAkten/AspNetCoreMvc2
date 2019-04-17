@@ -53,7 +53,7 @@ namespace AspNetCore
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(58, 177, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bedbaeba37be40bc8052a6063394975a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "88f54ef734e94f3abfa8d2d2bf885b13", async() => {
                 BeginContext(64, 164, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Index2</title>\r\n\t<link href=\"lib/bootstrap/dist/css/bootstrap.min.css\" rel=\"stylesheet\" />\r\n");
                 EndContext();
@@ -73,7 +73,7 @@ namespace AspNetCore
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(237, 85, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0f0b83e98d254d3bb842dc7d203e10b6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7f63191902604d6bb443984cc8bb3aef", async() => {
                 BeginContext(243, 72, true);
                 WriteLiteral("\r\n\tHello from the view!\r\n\t<a class=\"btn btn-success\" href=\"\">Click</a>\r\n");
                 EndContext();

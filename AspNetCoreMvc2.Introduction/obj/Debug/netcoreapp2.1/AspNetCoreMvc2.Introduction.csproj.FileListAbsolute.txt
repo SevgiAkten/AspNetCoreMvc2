@@ -57,4 +57,9 @@ C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Int
 C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\AspNetCoreMvc2.Introduction.dll
 C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\AspNetCoreMvc2.Introduction.pdb
 C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\AspNetCoreMvc2.Introduction.csproj.CopyComplete
-C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\AspNetCoreMvc2.Introduction.csprojAssemblyReference.cache
+C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\Razor\Views\Students\Create.g.cshtml.cs
+C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\Razor\Views\Students\Delete.g.cshtml.cs
+C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\Razor\Views\Students\Details.g.cshtml.cs
+C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\Razor\Views\Students\Edit.g.cshtml.cs
+C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\Razor\Views\Students\Index.g.cshtml.cs
+C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\Razor\Pages\Customer\Index.g.cshtml.cs
