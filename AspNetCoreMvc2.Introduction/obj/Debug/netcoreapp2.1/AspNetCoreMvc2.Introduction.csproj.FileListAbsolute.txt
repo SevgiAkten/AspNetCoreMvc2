@@ -57,4 +57,3 @@ C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Int
 C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\AspNetCoreMvc2.Introduction.dll
 C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\AspNetCoreMvc2.Introduction.pdb
 C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\AspNetCoreMvc2.Introduction.csproj.CopyComplete
-C:\Users\sevgI.akten\source\repos\AspNetCoreMvc2.Introduction\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\AspNetCoreMvc2.Introduction.csprojAssemblyReference.cache
