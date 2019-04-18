@@ -23,6 +23,10 @@ namespace AspNetCoreMvc2.Introduction
             var connection = @"Server=(localdb)\mssqllocaldb;Database=SchoolDb;Trusted_Connection=true";
             services.AddDbContext<SchoolContext>(options => options.UseSqlServer(connection));
 			services.AddTransient <ICalculator, Calculator8>();
+			services.AddSession();
+			services.AddDistributedMemoryCache();
+
+
             //çok sıklıkla çağrılan sınıflar singleton olabilir add delete gibi. sadece 1 nesne örneği oluşturur bellekten silmez 
             //addscoped her kullanıcı için bir nesne oluşturu
 		}
@@ -31,10 +35,18 @@ namespace AspNetCoreMvc2.Introduction
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 		{
 			app.UseStaticFiles();
+			env.EnvironmentName = EnvironmentName.Production;
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
 			}
+			else
+			{
+				app.UseExceptionHandler("/error");
+			}
+
+			app.UseSession();
+
 			//app.UseMvc(routes =>
 			//{
 			//	routes.MapRoute(
@@ -50,7 +62,7 @@ namespace AspNetCoreMvc2.Introduction
 
 		private void ConfigureRoutes(IRouteBuilder routeBuilder)
 		{
-			routeBuilder.MapRoute("Default", "{controller=Home}/{action=Index2}/{id?}");
+			routeBuilder.MapRoute("Default", "{controller=Filter}/{action=Index}/{id?}");
 			routeBuilder.MapRoute("MyRoute", "Sevgi/{controller=Home}/{action=Index3}/{id?}");
 		}
 	}

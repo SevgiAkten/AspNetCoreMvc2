@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Threading.Tasks;
 using AspNetCoreMvc2.Introduction.Entities;
+using AspNetCoreMvc2.Introduction.Filters;
 using AspNetCoreMvc2.Introduction.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,8 +17,11 @@ namespace AspNetCoreMvc2.Introduction.Controllers
             return "Welcome to home controller";
         }
 
+		[HandleException(ViewName ="DividedByZeroError", ExceptionType =typeof(DivideByZeroException))]
+		[HandleException(ViewName ="Error", ExceptionType = typeof(SecurityException))]
 		public ViewResult Index2()
 		{
+			throw new SecurityException();
 			return View();
 		}
 
