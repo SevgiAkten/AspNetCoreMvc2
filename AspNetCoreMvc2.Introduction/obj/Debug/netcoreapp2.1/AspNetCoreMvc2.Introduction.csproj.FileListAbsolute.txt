@@ -101,3 +101,7 @@ C:\Users\Sevgi AKTEN\source\repos\AspNetCoreMvc2\AspNetCoreMvc2.Introduction\obj
 C:\Users\Sevgi AKTEN\source\repos\AspNetCoreMvc2\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\AspNetCoreMvc2.Introduction.csproj.CopyComplete
 C:\Users\Sevgi AKTEN\source\repos\AspNetCoreMvc2\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\Razor\Pages\Studentp\Index.g.cshtml.cs
 C:\Users\Sevgi AKTEN\source\repos\AspNetCoreMvc2\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\StudentList\Default.g.cshtml.cs
+C:\Users\Sevgi AKTEN\source\repos\AspNetCoreMvc2\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\Razor\Views\Filter\Index.g.cshtml.cs
+C:\Users\Sevgi AKTEN\source\repos\AspNetCoreMvc2\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\Razor\Views\Common\Index.g.cshtml.cs
+C:\Users\Sevgi AKTEN\source\repos\AspNetCoreMvc2\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Sevgi AKTEN\source\repos\AspNetCoreMvc2\AspNetCoreMvc2.Introduction\obj\Debug\netcoreapp2.1\Razor\Views\Shared\DividedByZeroError.g.cshtml.cs

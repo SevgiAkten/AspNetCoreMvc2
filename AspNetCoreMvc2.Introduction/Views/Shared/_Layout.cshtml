@@ -8,7 +8,7 @@
 <body>
 	<div>Menu</div>
 	<div>
-		@await Component.InvokeAsync("StudentList")
+		@await Component.InvokeAsync("StudentList", new { filter="a"})
 	</div>
     <div>
         @RenderBody()

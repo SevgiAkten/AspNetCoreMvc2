@@ -17,9 +17,10 @@ namespace AspNetCoreMvc2.Introduction.ViewComponents
 			_context = context;
 		}
 
-		public ViewViewComponentResult Invoke()
+		public ViewViewComponentResult Invoke(string filter)
 		{
-			return View(new StudentListViewModel { Students = _context.Students.ToList() });
+			filter = HttpContext.Request.Query["filter"];
+			return View(new StudentListViewModel { Students = _context.Students.Where(s=>s.FirstName.Contains(filter)).ToList() });
 		}
 	}
 }
