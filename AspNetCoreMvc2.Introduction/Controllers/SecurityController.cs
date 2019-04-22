@@ -47,7 +47,7 @@ namespace AspNetCoreMvc2.Introduction.Controllers
 
 			if (result.Succeeded)
 			{
-				return RedirectToAction("Index", "Student");
+				return RedirectToAction("Index", "Students");
 			}
 
 			ModelState.AddModelError(string.Empty, "Login Failed");
@@ -73,6 +73,7 @@ namespace AspNetCoreMvc2.Introduction.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Register(RegisterViewModel registerViewModel)
 		{
+
 			if (!ModelState.IsValid)
 			{
 				return View(registerViewModel);
@@ -90,11 +91,11 @@ namespace AspNetCoreMvc2.Introduction.Controllers
 			if (result.Succeeded)
 			{
 				var confirmationCode = _userManager.GenerateEmailConfirmationTokenAsync(user);
-				var callBackUrl = Url.Action("ConfirmEmail", "Security", new { userId = user.Id, code = confirmationCode });
+				var callBackUrl = Url.Action("ConfirmEmail", "Security", new { userId = user.Id, code = confirmationCode.Result });
 
 				//Send Email
 
-				return RedirectToAction("Index", "Student");
+				return RedirectToAction("Index", "Students");
 			}
 
 			return View(registerViewModel);
@@ -104,7 +105,7 @@ namespace AspNetCoreMvc2.Introduction.Controllers
 		{
 			if (userId == null || code == null)
 			{
-				return RedirectToAction("Index", "Student");
+				return RedirectToAction("Index", "Students");
 			}
 			var user = await _userManager.FindByIdAsync(userId);
 			if (user == null)
@@ -118,7 +119,75 @@ namespace AspNetCoreMvc2.Introduction.Controllers
 				return View("ConfirmEmail");
 			}
 
-			return RedirectToAction("Index", "Student");
+			return RedirectToAction("Index", "Students");
+		}
+
+		public IActionResult ForgotPassword()
+		{
+			return View();
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> ForgotPassword(string email)
+		{
+			if (string.IsNullOrEmpty(email))
+			{
+				return View();
+			}
+
+			var user = await _userManager.FindByEmailAsync(email);
+			if (user == null)
+			{
+				return View();
+			}
+
+			var confirmationCode = _userManager.GeneratePasswordResetTokenAsync(user);
+			var callBackUrl = Url.Action("ResetPassword", "Security", new { userId = user.Id, code = confirmationCode });
+
+			//send callback url with email
+
+			return RedirectToAction("ForgotPasswordEmailSent");
+		}
+
+		public IActionResult ForgotPasswordEmailSent()
+		{
+			return View();
+		}
+
+		public IActionResult ResetPassword(string userId, string code)
+		{
+			if (userId == null || code == null)
+			{
+				throw new ApplicationException("User Id or Code must be supplied for password  reset");
+			}
+			var model = new ResetPasswordViewModel { Code = code };
+			return View(model);
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> ResetPassword(ResetPasswordViewModel resetPasswordViewModel)
+		{
+			if (!ModelState.IsValid)
+			{
+				return View(resetPasswordViewModel);
+			}
+
+			var user = await _userManager.FindByEmailAsync(resetPasswordViewModel.Email);
+			if (user == null)
+			{
+				throw new ApplicationException("User not found");
+			}
+			var result = await _userManager.ResetPasswordAsync(user, resetPasswordViewModel.Code, resetPasswordViewModel.Password);
+			if (result.Succeeded)
+			{
+				return RedirectToAction("ResetPasswordConfirm");
+			}
+			return View();
+		}
+
+		public IActionResult ResetPasswordConfirm()
+		{
+			return View();
 		}
 	}
 }
